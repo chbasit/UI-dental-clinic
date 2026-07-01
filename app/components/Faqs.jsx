@@ -35,11 +35,6 @@ export default function FAQSection() {
       answer:
         "Yes. We are committed to sustainable dentistry by using digital records, reducing paper waste, and incorporating environmentally conscious practices whenever possible.",
     },
-    {
-      question: "Can I text you?",
-      answer:
-        "Yes. You can text us for appointment requests, reminders, or general questions during business hours. We'll respond as quickly as possible.",
-    },
   ];
 
   const leftFaqs = faqs.slice(0, 3);
