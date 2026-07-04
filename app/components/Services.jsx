@@ -48,9 +48,9 @@ export default function Services() {
         <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
           <div>
             <p className="font-normal text-[#1A1A1A] leading-none text-4xl md:text-5xl lg:text-5xl">
-              Top Dental Care
-              <br />
-              in West Town Chicago
+              Best Dental Surgeon
+              <br />  
+              in Karachi
             </p>
           </div>
 

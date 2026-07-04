@@ -12,28 +12,28 @@ const testimonials = [
   {
     before: "/images/michael-before.webp",
     after: "/images/michael-after.webp",
-    name: "MICHAEL P.",
+    name: "Awais",
     review:
       "This completely changed how I feel about going to the dentist. I've never had a dental visit like this—totally painless and my smile has never looked better.",
   },
   {
     before: "/images/Priscilla-before.webp",
     after: "/images/Priscilla-after.webp",
-    name: "PRISCILLA L.",
+    name: "Ayesha",
     review:
       "I used to avoid the dentist. Now I actually look forward to it. From the moment I walked in, it felt different—more like a spa than a clinic. And the results? WOW.",
   },
   {
     before: "/images/Jordan-before.webp",
     after: "/images/Jordan-after.webp",
-    name: "JORDAN P.",
+    name: "Umer.",
     review:
       "Didn't expect to feel this good after a cleaning. I never knew how confident clean teeth could make me feel. It's not just cosmetic—it's a mindset shift.",
   },
   {
     before: "/images/Jordan-before.webp",
     after: "/images/Jordan-after.webp",
-    name: "JORDAN P.",
+    name: "Asad.",
     review:
       "Didn't expect to feel this good after a cleaning. I never knew how confident clean teeth could make me feel. It's not just cosmetic—it's a mindset shift.",
   },

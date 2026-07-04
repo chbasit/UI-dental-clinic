@@ -66,7 +66,7 @@ export default function Step() {
               </h3>
               
               {/* Step Description */}
-              <p className="text-xs md:text-xl leading-relaxed font-light opacity-85 max-w-70">
+              <p className="text-md md:text-xl leading-relaxed  opacity-85 max-w-70">
                 {step.description}
               </p>
               

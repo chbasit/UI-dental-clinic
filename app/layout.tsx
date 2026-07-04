@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import { Toaster } from "react-hot-toast";
 import {
   bagossCondensed,
   bagossExtended,
@@ -15,7 +15,9 @@ export default function RootLayout({
       lang="en"
       className={`${bagossCondensed.variable} ${bagossExtended.variable}`}
     >
-      <body className="font-condensed bg-[#FAF7F5]" >{children}</body>
+      <body className="font-condensed bg-[#FAF7F5]" >{children}
+        <Toaster position="top-right" />
+      </body>
     </html>
   );
 }

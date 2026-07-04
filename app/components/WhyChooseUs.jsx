@@ -12,39 +12,39 @@ import {
 const features = [
   {
     icon: Sparkles,
-    title: "Instant Results",
+    title: "Modern Technology",
     description:
-      "State-of-the-art technology delivering faster, more precise results.",
+      "Advanced equipment for accurate, efficient dental care.",
   },
   {
     icon: Wand2,
-    title: "Decades of Experience",
+    title: "Trusted Expertise",
     description:
-      "Our team is led by renowned clinicians with years of experience.",
+      "Experienced dentists committed to exceptional patient care.",
   },
   {
     icon: CalendarDays,
-    title: "One-Click Booking",
+    title: "Easy Scheduling",
     description:
-      "Open evenings, weekends, same and next-day appointments available.",
+      "Book your appointment online in just a few clicks.",
   },
   {
     icon: BadgeDollarSign,
-    title: "Transparent Pricing",
+    title: "Honest Pricing",
     description:
-      "Straight-forward pricing, insurance eligible, no surprises or upsells.",
+      "Clear treatment costs with no hidden fees.",
   },
   {
     icon: HandHeart,
-    title: "Gentle-Minded Treatments",
+    title: "Comfort-Focused Care",
     description:
-      "No needles. No drills. Just comfort-first dentistry.",
+      "Gentle treatments designed to keep you relaxed.",
   },
   {
     icon: Smile,
-    title: "Complimentary Comforts",
+    title: "Relaxing Experience",
     description:
-      "Relax with eye masks, noise-cancelling meditation, massage boots and more.",
+      "Enjoy a welcoming environment throughout your visit.",
   },
 ];
 

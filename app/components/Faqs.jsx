@@ -21,12 +21,12 @@ export default function FAQSection() {
         "Your first visit typically includes a comprehensive dental examination, digital X-rays if required, an oral health assessment, and a consultation where we discuss your treatment options and answer any questions.",
     },
     {
-      question: "Do you treat anxious patients?",
+      question: "Do you treat anxious patients ?",
       answer:
         "Absolutely. We specialize in creating a calm and welcoming environment. Our gentle approach, clear communication, and comfort-focused care help patients feel relaxed throughout their visit.",
     },
     {
-      question: "Do you offer emergency appointments?",
+      question: "Do you offer emergency appointments.",
       answer:
         "Yes. We reserve time each day for dental emergencies such as severe tooth pain, broken teeth, swelling, or injuries. Please call us as early as possible for immediate assistance.",
     },

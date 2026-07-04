@@ -6,20 +6,18 @@ import Image from "next/image";
 // Dynamic content array for the automatic slider
 const slidesData = [
   {
-    id: 1,
-    tagline: "NEW GUEST OFFER",
-    title: "GleamTox: Relief for Your Jaw. Definition for Your Profile.",
-    description: "Precision-guided care that reduces clenching, improves symmetry, and enhances lower-face definition. New guests receive $10 per unit, ends this month.",
-    buttonText: "BOOK NOW & SAVE",
-    imageSrc: "/images/header1.webp", // Path to your provided image
-    alt: "GleamTox jaw definition and clenching relief treatment"
-  },
+  "id": 1,
+  "title": "Advanced Oral Surgery & Premium Dental Care in Karachi",
+  "description": "Experience world-class dental surgery tailored to your comfort. From complex extractions to smile transformations, our expert team ensures a seamless, pain-free recovery.",
+  "buttonText": "Book Appointment",
+  "imageSrc": "/images/header1.webp",
+  "alt": "Advanced dental surgery and modern oral care at a premium clinic in Karachi"
+},
   {
     id: 2,
-    tagline: "JULY 4TH OFFER: $125 OFF",
-    title: "The most powerful cleaning & whitening",
+    title: "Modern dental care, thoughtfully delivered.",
     description: "Airflow cleaning & whitening that removes stains and leaves your mouth feeling lighter, smoother, and visibly brighter.",
-    buttonText: "BOOK & SAVE $125",
+    buttonText: "Book A Visit",
     imageSrc: "/images/header2.webp", // Path to your second image
     alt: "Airflow advanced teeth cleaning and dynamic whitening"
   }
@@ -32,14 +30,13 @@ export default function Header() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesData.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative w-full h-[calc(100vh-80px)] flex items-center bg-[#1B1413] text-white overflow-hidden">
+    <section className="relative w-full h-[calc(100vh-90px)] flex items-center bg-[#1B1413] text-white overflow-hidden">
       
-      {/* Background Image Slider Container */}
       <div className="absolute inset-0 w-full h-full z-0">
         {slidesData.map((slide, index) => (
           <div
@@ -55,20 +52,15 @@ export default function Header() {
               priority={index === 0}
               className="object-cover object-center"
             />
-            {/* Soft dark overlay to keep high typography contrast readability */}
             <div className="absolute inset-0 bg-black/30 md:bg-gradient-to-r md:from-black/60 md:to-transparent" />
           </div>
         ))}
       </div>
 
-      {/* Dynamic Text & Interactive Content Layer */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 py-12 flex flex-col justify-between min-h-screen">
         
-        {/* Main dynamic text content bucket */}
         <div className="my-auto max-w-2xl md:max-w-3xl">
-          <p className="uppercase tracking-[3px] text-[#DDF5ED] font-normal text-xs sm:text-xl mb-4 transition-all duration-500">
-            {slidesData[currentSlide].tagline}
-          </p>
+           
 
           <h1 className="leading-[1.15] font-normal text-white text-4xl sm:text-5xl lg:text-6xl tracking-tight transition-all duration-500">
             {slidesData[currentSlide].title}
@@ -78,11 +70,12 @@ export default function Header() {
             {slidesData[currentSlide].description}
           </p>
 
-          <button className="mt-8 bg-white rounded-full px-8 py-3.5 text-xs sm:text-sm  tracking-[2px] text-[#963f36] font-semibold hover:scale-105 transition shadow-lg">
+          <button className="mt-8 mb-4 bg-white rounded-lg cursor-pointer px-8 py-3 text-md sm:text-lg   text-[#963f36] font-normal hover:scale-105 transition shadow-sm">
             {slidesData[currentSlide].buttonText}
           </button>
-
-          {/* Dynamic Slider Pagination Dots */}
+<p className="text-lg">
+  Call us at <span className="underline"> +92 322 2182569</span>   or text us at <span className="underline"> +92 322 2182569 </span>
+  </p>
           <div className="flex gap-2.5 mt-12 items-center">
             {slidesData.map((_, index) => (
               <button
@@ -96,7 +89,30 @@ export default function Header() {
             ))}
           </div>
         </div>
+<div className="absolute bottom-14 right-6 sm:right-12 lg:right-16">
+  <div className="bg-transparent  py-4">
+    
+    <div className="flex items-center gap-3">
+     
+      <div className="flex text-[#ffffff] text-2xl leading-none">
+        ★★★★★
+      </div>
+      <div className="bg-white rounded-3xl py-1">
+       <Image
+        src="/images/googlelogo.png"
+        alt="Google"
+        width={40}
+        height={18}
+      />
+      </div>
 
+   
+    <p className="text-md  md:text-2xl text-white">
+      100+ 5 - star Reviews
+    </p>
+    </div>
+  </div>
+</div>
      
       
 

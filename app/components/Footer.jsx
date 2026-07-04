@@ -17,8 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h2 className="text-3xl text-[#2A2A2A] font-semibold mb-5">
-              Avenue Dental
+            <h2 className="text-2xl text-[#2A2A2A] font-semibold mb-5">
+              Aslam Dental Care
             </h2>
 
             <p className="text-[#666] leading-7">
@@ -116,11 +116,11 @@ export default function Footer() {
                 />
 
                 <p>
-                  Avenue Dental
+                  Aslam Dental Care
                   <br />
-                  1844 W Chicago Ave
+                   Bungalow 217,Opposite Jheel Park Rd
                   <br />
-                  Chicago, IL 60622
+                  Delhi Mercantile Society, PECHS Block-03, Karachi, Pakistan
                 </p>
               </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
                   href="tel:3123226882"
                   className="hover:text-[#C89078] transition"
                 >
-                  (312) 322 6882
+                  +92 3222182569
                 </a>
               </div>
 
@@ -142,7 +142,7 @@ export default function Footer() {
                   href="mailto:info@avenuedental.com"
                   className="hover:text-[#C89078] transition"
                 >
-                  info@avenuedental.com
+                  info@aslamdentalcare.com
                 </a>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 pt-6 border-t border-[#E6DDD3] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#777] text-center md:text-left">
-            © {new Date().getFullYear()} Avenue Dental. All rights reserved.
+            © {new Date().getFullYear()} Aslam Dental care. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-sm">
