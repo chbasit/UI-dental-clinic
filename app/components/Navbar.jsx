@@ -57,7 +57,7 @@ export default function Navbar() {
                  (415) 454-5667
               </p>
 
-              <button className="bg-[#133A34] text-white px-2 py-1 rounded-tl-4xl rounded-tr-4xl rounded-br-4xl tracking-[2px] text-sm font-regular hover:bg-[#133A34] cursor-pointer transition">
+              <button className="bg-[#133A34] text-white px-5 py-3 rounded-tl-4xl rounded-tr-4xl rounded-br-4xl tracking-[2px] text-sm font-regular hover:bg-[#133A34] cursor-pointer transition">
                 Book Appointment
               </button>
             </div>
