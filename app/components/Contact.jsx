@@ -2,47 +2,31 @@ import React from 'react';
 
 export default function VisitOurStudio() {
   const officeHours = [
-    { day: 'Monday', time: '10am – 7pm' },
-    { day: 'Tuesday', time: '10am – 7pm' },
-    { day: 'Wednesday', time: '10am – 7pm' },
-    { day: 'Thursday', time: '10am – 7pm' },
-    { day: 'Friday', time: '10am – 7pm' },
-    { day: 'Saturday', time: '10am – 7pm' },
+    { day: 'Monday', time: '9am –  5:30pm (Lunch 1:00  –  2:00pm)' },
+    { day: 'Tuesday', time: '9am –  5:30pm (Lunch 1:00  –  2:00pm)' },
+    { day: 'Wednesday', time: '9am –  5:30pm (Lunch 1:00  –  2:00pm)' },
+    { day: 'Thursday', time: '9am –  5:30pm (Lunch 1:00  –  2:00pm)' },
+    { day: 'Friday', time: '9am –  2:00pm ' },
+    { day: 'Saturday', time: 'By Appointment' },
+    {day: 'Sunday', time:"closed"}
   ];
 
-  const mapLink = "https://www.google.com/maps/place/Jheel+Park+Rd,+Block+2+PECHS,+Karachi,+Pakistan/@24.8690089,67.0590852,17z/data=!4m15!1m8!3m7!1s0x3eb33e911ac9b255:0x28ac06104d71a0c2!2sJheel+Park+Rd,+Block+2+PECHS,+Karachi,+Pakistan!3b1!8m2!3d24.8690041!4d67.0616601!16s%2Fg%2F11h4yp7k_k!3m5!1s0x3eb33e911ac9b255:0x28ac06104d71a0c2!8m2!3d24.8690041!4d67.0616601!16s%2Fg%2F11h4yp7k_k?authuser=0&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D&source=embed";
 
   return (
-    <div className="bg-[#F8F5F0] py-16 px-4 md:px-10 lg:px-16">
-  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+    <div className="bg-[#fff] py-16 px-4 md:px-10 lg:px-16">
+  <div className="max-w-[1450px] mx-auto grid lg:grid-cols-2 items-start">
 
     <div className="border border-[#1A1A1A] rounded-2xl p-8 md:p-12 flex flex-col justify-between "> <div> 
-     <h2 className="text-4xl md:text-5xl font-normal mb-6"> Visit Our Clinic </h2> 
-     <p className="text-sm md:text-base font-normal leading-relaxed text-[#2C2C2C] max-w-xl"> Aslam Dental Care is conveniently located at Bungalow 217, Opposite Jheel Park Rd, Delhi Mercantile Society, PECHS Block-03, Karachi, Pakistan. <a href="/contact" className="underline underline-offset-4 hover:opacity-80 font-medium">Contact Us</a> or call <a href="tel:03222182569" className="underline underline-offset-4 font-medium">03222182569</a> for more details. </p> </div> 
-     <div className="border-t border-[#1A1A1A] my-8 w-full" /> 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start"> 
-        {/* Phone Block */} <div className="flex flex-col gap-2"> 
-          <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Phone</span> <a href="tel:3123226882" className="text-base font-medium hover:opacity-70 transition-opacity"> +92 3222182569 </a> </div>
-           {/* Hours Block with left thin border line */} <div className="flex flex-col gap-2 md:border-l md:border-[#1A1A1A]/30 md:pl-8"> <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Hours</span> 
-           <ul className="text-sm space-y-1.5 font-normal"> 
-            {officeHours.map((schedule, index) => ( <li key={index} className="flex gap-1"> 
+     <h2 className="text-4xl md:text-5xl font-normal mb-6 tracking-wide leading-tight text-[#1A1A1A] "> Visit Our Clinic </h2> 
+     <p className="text-sm md:text-base font-normal leading-relaxed text-gray-700 max-w-xl"> Ross Valley Dental is conveniently located at 915 Sir Francis Drake Blvd, Suite 1 San Anselmo, CA 94960. <a href="/contact" className="underline underline-offset-4 hover:opacity-80 font-medium">Contact Us</a> or call <a href="tel:(415) 454-5667" className="underline underline-offset-4 font-medium">(415) 454-5667</a> for more details. </p> </div> 
+    <ul className="text-sm md:text-md space-y-3 font-normal mt-8"> 
+            {officeHours.map((schedule, index) => ( <li key={index} className="flex "> 
               <span className="font-semibold w-24">{schedule.day}:</span> <span className="text-gray-700">
-                {schedule.time}</span> </li> ))} </ul> </div> </div> {/* Thin Divider Line 2 */} 
-                <div className="border-t border-[#1A1A1A] my-8 w-full" />
-                 {/* Bottom Row: Address & Google Maps Embed Viewport */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end"> 
-                    {/* Address Block */} <div className="flex flex-col gap-3"> 
-                      <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Address</span> 
-                      <address className="not-italic text-sm leading-relaxed text-gray-800"> Bungalow 217, Opposite Jheel Park Rd, Delhi Mercantile Society<br /> 
-                      PECHS Block-03, Karachi, Pakistan. </address>
-                       <a href={mapLink} target="_blank" rel="noopener noreferrer"
-                        className="text-sm font-semibold underline underline-offset-4 inline-flex items-center gap-1 group mt-2" > 
-                        Get Directions <span className="inline-block transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
-                         </a> </div> {/* Visual Mini Map UI Container */} 
-           
-         <div className="w-full h-56 rounded-lg overflow-hidden relative">
+                {schedule.time}</span> </li> ))} </ul> 
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-end mt-4">       
+         <div className="w-full h-70 rounded-lg overflow-hidden relative">
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.8489236635464!2d67.05908517529687!3d24.869008944915528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e911ac9b255%3A0x28ac06104d71a0c2!2sJheel%20Park%20Rd%2C%20Block%202%20PECHS%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1783150391144!5m2!1sen!2s"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.8573306289363!2d-122.56898472423175!3d37.98045870028537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808597116faf9f9d%3A0x73f3d3561697cd4f!2s915%20Sir%20Francis%20Drake%20Blvd%20%231%2C%20San%20Anselmo%2C%20CA%2094960%2C%20USA!5e0!3m2!1sen!2s!4v1783232032356!5m2!1sen!2s"
     className="w-full h-full border-0 grayscale opacity-90 hover:grayscale-0 transition-all duration-300"
     allowFullScreen
     loading="lazy"
@@ -58,7 +42,7 @@ export default function VisitOurStudio() {
 
     
 
-      <h3 className="text-3xl md:text-5xl font-normal  text-[#1A1A1A]">
+      <h3 className="text-3xl md:text-5xl font-normal  text-[#1A1A1A] tracking-wide leading-tight">
         Schedule Your Visit
       </h3>
 
@@ -120,7 +104,7 @@ export default function VisitOurStudio() {
 
         <button
           type="submit"
-          className="w-full rounded-lg bg-[#963f36] hover:bg-[#5d745] cursor-pointer text-white py-4 text-lg transition-all duration-300"
+          className="w-full rounded-lg bg-[#133A34] hover:bg-[#5d745] cursor-pointer text-white py-4 text-lg transition-all duration-300"
         >
           Book Appointment
         </button>

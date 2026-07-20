@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion"; 
 import {
   Sparkles,
   CalendarDays,
@@ -47,21 +47,38 @@ const features = [
       "Enjoy a welcoming environment throughout your visit.",
   },
 ];
-
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.9,
+      ease: "easeOut",
+    },
+  },
+};
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#F8F5F0] py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12">
+    <section className="bg-[#fff] py-16 md:py-24">
+      <div className="max-w-[1450px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Changed from lg:grid-cols-2 to lg:grid-cols-12 layout matrix */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-16">
 
           {/* Left Side: Takes up 4 columns out of 12 (Saves space) */}
-          <div className="lg:col-span-4  lg:top-8 ">
-            <p className="text-[#111111] font-normal  text-4xl md:text-5xl lg:text-[64px] ">
-              Experience Dental Care Done Differently
+          <motion.div variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+     className="lg:col-span-4  lg:top-8">
+            <p className="text-[#111111] font-normal  text-4xl md:text-5xl tracking-wide leading-tight ">
+              Dental Care, Thoughtfully Reimagined.
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Side: Takes up 8 columns out of 12 (More breathing room for items) */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
@@ -84,7 +101,7 @@ export default function WhyChooseUs() {
 
                   {/* Content */}
                   <div>
-                    <h3 className="uppercase tracking-wide text-[#A24E36] font-semibold text-base md:text-lg leading-tight">
+                    <h3 className="uppercase tracking-wide text-[#133A34] font-semibold text-base md:text-lg leading-tight">
                       {item.title}
                     </h3>
 

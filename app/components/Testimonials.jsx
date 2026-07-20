@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { ShieldCheck, Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,46 +13,61 @@ const testimonials = [
   {
     before: "/images/michael-before.webp",
     after: "/images/michael-after.webp",
-    name: "Awais",
+    name: "Oliver",
     review:
       "This completely changed how I feel about going to the dentist. I've never had a dental visit like this—totally painless and my smile has never looked better.",
   },
   {
     before: "/images/Priscilla-before.webp",
     after: "/images/Priscilla-after.webp",
-    name: "Ayesha",
+    name: "Lily",
     review:
       "I used to avoid the dentist. Now I actually look forward to it. From the moment I walked in, it felt different—more like a spa than a clinic. And the results? WOW.",
   },
   {
     before: "/images/Jordan-before.webp",
     after: "/images/Jordan-after.webp",
-    name: "Umer.",
+    name: "Leo",
     review:
       "Didn't expect to feel this good after a cleaning. I never knew how confident clean teeth could make me feel. It's not just cosmetic—it's a mindset shift.",
   },
   {
     before: "/images/Jordan-before.webp",
     after: "/images/Jordan-after.webp",
-    name: "Asad.",
+    name: "James",
     review:
       "Didn't expect to feel this good after a cleaning. I never knew how confident clean teeth could make me feel. It's not just cosmetic—it's a mindset shift.",
   },
 ];
-
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 export default function Testimonials() {
   return (
-    <section className="bg-[#F8F5F0] py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <section className="bg-[#fff] py-16 lg:py-20">
+      <div className="max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* Heading */}
-        <div className="text-center mb-14"> 
+        <motion.div className="text-center mb-14"
+         variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}> 
           <p className="font-normal text-[#111] text-4xl md:text-5xl lg:text-5xl">
-            97% of Guests See
-            <br />
-            Instant Results
+            With over 2,000 smiles designed and counting, <br/>there's nothing average about the result we deliver.
           </p>
-        </div>
+        </motion.div>
 
         {/* Slider */}
         <Swiper
@@ -83,7 +99,7 @@ export default function Testimonials() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="border border-[#B95A48] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 h-full flex flex-col">
+              <div className="border border-[#133A34] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 h-full flex flex-col">
 
                 {/* Images */}
                 <div className="p-6 pb-4">
@@ -141,11 +157,11 @@ export default function Testimonials() {
                   {/* The remaining part of the card continues in Part 2 */}
                                     {/* Reviewer */}
                   <div className="mt-6">
-                    <h4 className="uppercase tracking-[2px] text-[#A54D39] font-semibold text-lg">
+                    <h4 className="uppercase tracking-[2px] text-gray-800 font-normal text-lg">
                       {item.name}
                     </h4>
 
-                    <div className="flex items-center gap-2 mt-2 text-sm text-gray-700">
+                    <div className="flex items-center gap-2 mt-2 text-sm text-gray-800">
                       <ShieldCheck size={16} className="fill-black text-black" />
                       <span>Verified review</span>
                     </div>

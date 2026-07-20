@@ -21,8 +21,8 @@ export default function AcceptedInsurances() {
   );
 
   return (
-    <section className="bg-[#963F36] text-white py-20 px-6 sm:px-12 lg:px-16 border-t border-white/5">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#133A34] text-white py-20 px-6 sm:px-12 lg:px-16 border-t border-white/5">
+      <div className="max-w-[1450px] mx-auto">
         
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">

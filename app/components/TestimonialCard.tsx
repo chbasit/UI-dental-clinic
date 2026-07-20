@@ -26,7 +26,7 @@ export default function TestimonialCard({
             <Star
               key={i}
               size={20}
-              fill="black"
+              fill="#eab308"
               strokeWidth={0}
             />
           ))}
@@ -39,7 +39,7 @@ export default function TestimonialCard({
 
       </div>
 
-      <p className="mt-4  text-sm md:text-md   text-[#1F1B1A]">
+      <p className="mt-4  text-sm md:text-lg font-normal   text-[#1F1B1A]">
         — {name}
       </p>
     </div>

@@ -11,6 +11,8 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import About from "./components/About"
 import GoogleReview from "./components/GoogleReviews"
+import Instagram from "./components/Instagram"
+
 export default function Home() {
   return (
     <>
@@ -23,6 +25,7 @@ export default function Home() {
       <Step/>
       <Testimonial/>
       <GoogleReview/>
+      <Instagram/>
       {/* <Payment/> */}
       {/* <Insurrence/> */}
       <Faqs/>

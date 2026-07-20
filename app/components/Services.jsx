@@ -3,64 +3,89 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
+import { motion } from "framer-motion";
 import "swiper/css";
 
  
 const services = [
   {
-    title: "Cleaning & Whitening",
+    title: "Teeth Cleaning & Whitening",
     image: "/images/category1.webp",
-    description: "Your path to immediate results. Clean first, whiten better.",
-    button: "Book Now",
+    description: "Deep cleaning followed by professional whitening for immediate result.",
+    button: "Book Appointment",
   },
   {
-    title: "Overnight Aligners",
+    title: "Night time Aligners",
     image: "/images/category2.webp",
-    description: "3D scan, bite analysis, and custom aligner treatment.",
-    button: "Book Consultation",
+    description: "Straighten your teeth while you sleep. Includes full 3D scans and bite analysis.",
+    button: "Schedule Consultation",
   },
   {
-    title: "(New) Gleamtox",
+    title: "Gleamtox (New)",
     image: "/images/category3.webp",
-    description: "A treatment to ease muscle tension and restore facial harmony.",
-    button: "Book Consultation",
+    description: "Therapeutic facial treatment designed to relieve jaw tension.",
+    button: "Schedule Consultation",
   },
   {
-    title: "Airflow® Cleaning",
+    title: "Airflow® Deep Clean",
     image: "/images/category4.webp",
-    description: "Powerful clean. Comfort-first tech. Gentle by design.",
-    button: "Book Cleaning",
+    description: "Advanced, stain-removing technology. Maximum comfort, incredibly gentle.",
+    button: "Book Clean",
   },
   {
-    title: "Advanced Whitening",
+    title: "Clinical Whitening",
     image: "/images/category2.webp",
-    description: "Dentist-developed whitening treatment.",
-    button: "Book Whitening",
+    description: "Medical-grade whitening treatments developed  by dental experts.",
+    button: "Book Treatment",
   },
 ];
-
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.9,
+      ease: "easeOut",
+    },
+  },
+};
 export default function Services() {
   return (
-    <section className="bg-[#F8F5F0] py-10">
-      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
+    <section className="bg-[#fff] py-10">
+      <div className="max-w-[1450px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Heading */}
-        <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
-          <div>
-            <p className="font-normal text-[#1A1A1A] leading-none text-4xl md:text-5xl lg:text-5xl">
-              Best Dental Surgeon
-              <br />  
-              in Karachi
-            </p>
-          </div>
+       <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+  >
+    <p className="font-normal text-[#1A1A1A] leading-none text-4xl md:text-5xl lg:text-5xl">
+      Best Dental Surgeon
+      <br />
+      in San Anselmo, CA
+    </p>
+  </motion.div>
 
-          <div className="lg:flex lg:justify-end pt-4 ">
-            <p className="text-[#1A1A1A] max-w-xl text-base md:text-lg lg:text-xl leading-snug font-normal">
-              Expert-led, gentle care that supports your long-term
-              health—because your mouth is connected to everything.
-            </p>
-          </div>
-        </div>
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ delay: 0.2 }}
+    className="lg:flex lg:justify-end pt-4"
+  >
+    <p className="text-[#1A1A1A] max-w-xl text-base md:text-lg lg:text-xl leading-snug font-normal">
+      Elevated dentistry that honors the connection between your oral
+      health and your body’s natural harmony.
+    </p>
+  </motion.div>
+</div>
 
         {/* Slider */}
         <Swiper
@@ -92,7 +117,7 @@ export default function Services() {
         >
           {services.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#6E8568] rounded-2xl  overflow-hidden border border-[#5D6B55] transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+              <div className="bg-[#133A34] rounded-2xl  overflow-hidden border border-[#133A34] transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
                 {/* Title */}
                 <div className="pt-6 px-5">
                   <h3 className="uppercase text-center text-white font-medium tracking-wide text-md md:text-lg min-h-[20px]">
@@ -121,7 +146,7 @@ export default function Services() {
 
                 {/* Button */}
                 <div className="px-5 pb-6">
-                  <button className="w-full rounded-full bg-white py-2 uppercase tracking-[2px] font-medium text-[#2F2F2F] text-sm md:text-base transition duration-300 hover:bg-[#F1ECE5] hover:scale-[1.02]">
+                  <button className="w-full rounded-lg cursor-pointer bg-white py-2 uppercase tracking-[2px] font-medium text-[#2F2F2F] text-sm md:text-base transition duration-300 hover:bg-[#F1ECE5] hover:scale-[1.02]">
                     {item.button}
                   </button>
                 </div>

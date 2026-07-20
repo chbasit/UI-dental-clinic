@@ -17,22 +17,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Fixed Header */}
-      <header className="fixed top-0 left-0 w-full z-50">
-        {/* Top Offer Bar */}
-        <div className="bg-[#DBF6E9] text-center py-2">
-          <p className="text-[11px] md:text-xs lg:text-sm tracking-[3px] font-medium uppercase text-gray-700">
-            ✦ Wake Up To A Straighter Smile  ✦
-          </p>
-        </div>
-
-        {/* Navbar */}
-        <nav className="bg-[#FAF7F5]/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 h-20 flex items-center justify-between">
+     
+      <header className="fixed top-0 left-0 w-full z-50"> 
+        <nav className="bg-[#fff] backdrop-blur-md shadow-sm">
+          <div className="max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-14 h-20 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/images/logi.png"
+                src="/images/ros.png"
                 alt="Avenue Dental"
                 width={64}
                 height={64}
@@ -40,11 +32,11 @@ export default function Navbar() {
               />
 
               <div>
-                <h1 className="text-xl md:text-2xl font-semibold tracking-wider leading-none text-[#963f36]">
-                  Aslam Dental
+                <h1 className="text-md md:text-2xl font-semibold tracking-wider leading-none text-[#133A34]">
+                 Ross Valley
                 </h1>
-                <p className="hidden md:block text-xl text-[#963f36] tracking-wider ">
-                  care
+                <p className="block text-sm md:text-xl text-[#133A34] tracking-wider ">
+                  Dental
                 </p>
               </div>
             </Link>
@@ -62,10 +54,10 @@ export default function Navbar() {
               ))}
 
               <p className="text-gray-700 font-medium">
-                 +92 3222182569
+                 (415) 454-5667
               </p>
 
-              <button className="bg-[#963f36] text-white px-8 py-3 rounded-lg tracking-[2px] text-sm font-normal hover:bg-[#963f36] cursor-pointer transition">
+              <button className="bg-[#133A34] text-white px-2 py-1 rounded-tl-4xl rounded-tr-4xl rounded-br-4xl tracking-[2px] text-sm font-regular hover:bg-[#133A34] cursor-pointer transition">
                 Book Appointment
               </button>
             </div>
@@ -85,7 +77,7 @@ export default function Navbar() {
               open ? "max-h-[500px]" : "max-h-0"
             }`}
           >
-            <div className="bg-[#FAF5F7]/95 px-6 py-6 flex flex-col gap-5 shadow-md">
+            <div className="bg-[#Fff]/95 px-6 py-6 flex flex-col gap-5 shadow-md">
               {navItems.map((item) => (
                 <Link
                   href="/"
@@ -99,7 +91,7 @@ export default function Navbar() {
 
               <p className="font-medium">(312) 322-6882</p>
 
-              <button className="bg-[#963f36] text-white rounded-lg py-3">
+              <button className="bg-[#133A34] text-white rounded-lg py-3">
                 Book Now
               </button>
             </div>
@@ -108,7 +100,7 @@ export default function Navbar() {
       </header>
 
       {/* Spacer because navbar is fixed */}
-      <div className="h-[112px] md:h-[112px]" />
+      <div className="h-[70px] md:h-[80px]" />
     </>
   );
 }

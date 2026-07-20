@@ -1,7 +1,32 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function FAQSection() {
   const faqs = [
@@ -21,12 +46,12 @@ export default function FAQSection() {
         "Your first visit typically includes a comprehensive dental examination, digital X-rays if required, an oral health assessment, and a consultation where we discuss your treatment options and answer any questions.",
     },
     {
-      question: "Do you treat anxious patients ?",
+      question: "Do you treat anxious patients?",
       answer:
         "Absolutely. We specialize in creating a calm and welcoming environment. Our gentle approach, clear communication, and comfort-focused care help patients feel relaxed throughout their visit.",
     },
     {
-      question: "Do you offer emergency appointments.",
+      question: "Do you offer emergency appointments?",
       answer:
         "Yes. We reserve time each day for dental emergencies such as severe tooth pain, broken teeth, swelling, or injuries. Please call us as early as possible for immediate assistance.",
     },
@@ -39,67 +64,72 @@ export default function FAQSection() {
 
   const leftFaqs = faqs.slice(0, 3);
   const rightFaqs = faqs.slice(3);
+const [openIndex, setOpenIndex] = useState(null);
 
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const renderFaqs = (items, offset = 0) =>
+const renderFaqs = (items, offset = 0) =>
     items.map((faq, index) => {
       const currentIndex = index + offset;
       const isOpen = openIndex === currentIndex;
 
       return (
-        <div
+        <motion.div
           key={currentIndex}
-          className={`border-b border-[#D9D2C9] ${
+          variants={fadeUp}
+          className={`border-b border-[#d8d8d8] ${
             index === 0 ? "border-t border-[#D9D2C9]" : ""
           }`}
         >
           <button
-            onClick={() =>
-              setOpenIndex(isOpen ? null : currentIndex)
-            }
-            className="w-full flex justify-between items-center py-6 text-left"
+            onClick={() => setOpenIndex(isOpen ? null : currentIndex)}
+            className="w-full flex justify-between items-center py-6 text-left cursor-pointer"
           >
             <h3 className="text-lg md:text-xl font-normal pr-4">
               {faq.question}
             </h3>
 
             <ChevronDown
-              className={`w-6 h-6 text-[#E29B9B] transition-transform duration-300 cursor-pointer ${
+              className={`w-6 h-6 text-[#1A1A1A] transition-transform duration-300 ${
                 isOpen ? "rotate-180" : ""
               }`}
             />
           </button>
 
           <div
-            className={`overflow-hidden transition-all duration-300  cursor-pointer ${
+            className={`overflow-hidden transition-all duration-300 ${
               isOpen ? "max-h-40 pb-6" : "max-h-0"
             }`}
           >
-            <p className="text-gray-600 leading-7 pr-8">
-              {faq.answer}
-            </p>
+            <p className="text-gray-700 leading-7 pr-8">{faq.answer}</p>
           </div>
-        </div>
+        </motion.div>
       );
     });
 
   return (
-    <section className="bg-[#F8F5F0] py-26 px-6 text-[#1A1A1A]">
+    <section className="bg-[#fff] py-12 px-6 text-[#1A1A1A]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-normal mb-16 tracking-wide leading-tight">
-          Frequently Asked
-          <br />
-          Questions
-        </h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center text-4xl md:text-5xl font-normal mb-16 tracking-wide leading-tight"
+        >
+          Frequently Asked  Questions
+        </motion.h2>
 
-        {/* Two Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16">
+        {/* FAQ Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           <div>{renderFaqs(leftFaqs, 0)}</div>
-
           <div>{renderFaqs(rightFaqs, 3)}</div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function PaymentPlans() {
   return (
-    <section className="bg-[#F8f5f0] text-[#1A1A1A] py-20 px-6 sm:px-12 lg:px-16 border-t border-white/5">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#fff] text-[#1A1A1A] py-20 px-6 sm:px-12 lg:px-16 border-t border-white/5">
+      <div className="max-w-[1450px] mx-auto">
         
         {/* Header Section */}
         <div className=" mb-16 text-center">

@@ -12,16 +12,16 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F8f5f0] ">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+    <footer className="bg-[#133A34]  text-white rounded-t-4xl">
+      <div className="max-w-[1450px] mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl text-[#2A2A2A] font-semibold mb-5">
-              Aslam Dental Care
+            <h2 className="text-2xl  font-semibold mb-5">
+              Ross valley Dental 
             </h2>
 
-            <p className="text-[#666] leading-7">
+            <p className="leading-7">
               Creating confident smiles through gentle, modern dental care.
               Our experienced team is committed to providing exceptional
               treatment in a comfortable and welcoming environment.
@@ -53,11 +53,11 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-xl font-semibold text-[#2A2A2A] mb-5">
+            <h3 className="text-xl font-semibold  mb-5">
               Navigation
             </h3>
 
-            <ul className="space-y-3 text-[#666]">
+            <ul className="space-y-3 ">
               <li>
                 <Link href="/" className="hover:text-[#C89078] transition">
                   Home
@@ -89,11 +89,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-semibold text-[#2A2A2A] mb-5">
+            <h3 className="text-xl font-semibold  mb-5">
               Services
             </h3>
 
-            <ul className="space-y-3 text-[#666]">
+            <ul className="space-y-3 ">
               <li>General Dentistry</li>
               <li>Cosmetic Dentistry</li>
               <li>Dental Implants</li>
@@ -104,45 +104,43 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold text-[#2A2A2A] mb-5">
+            <h3 className="text-xl font-semibold  not-first: mb-5">
               Contact
             </h3>
 
-            <div className="space-y-5 text-[#666]">
+            <div className="space-y-5">
               <div className="flex gap-3">
                 <MapPin
-                  className="text-[#C89078] mt-1 shrink-0"
+                  className="text-[#fff] mt-1 shrink-0"
                   size={20}
                 />
 
                 <p>
-                  Aslam Dental Care
+                  Ross valley Dental 
                   <br />
-                   Bungalow 217,Opposite Jheel Park Rd
-                  <br />
-                  Delhi Mercantile Society, PECHS Block-03, Karachi, Pakistan
+                   915 Sir Francis Drake Blvd, Suite 1 San Anselmo, CA 94960
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="text-[#C89078]" size={20} />
+                <Phone className="text-white" size={20} />
 
                 <a
                   href="tel:3123226882"
                   className="hover:text-[#C89078] transition"
                 >
-                  +92 3222182569
+                  (415) 454-5667
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail className="text-[#C89078]" size={20} />
+                <Mail className="text-white" size={20} />
 
                 <a
-                  href="mailto:info@avenuedental.com"
-                  className="hover:text-[#C89078] transition"
+                  href="mailto:smile@rossvalleydental.com"
+                  className="hover:text-white transition"
                 >
-                  info@aslamdentalcare.com
+                  smile@rossvalleydental.com
                 </a>
               </div>
             </div>
@@ -151,21 +149,21 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-14 pt-6 border-t border-[#E6DDD3] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[#777] text-center md:text-left">
-            © {new Date().getFullYear()} Aslam Dental care. All rights reserved.
+          <p className="text-sm  text-center md:text-left">
+            © {new Date().getFullYear()} Ross valley Dental . All rights reserved.
           </p>
 
           <div className="flex gap-6 text-sm">
             <Link
               href="/privacy-policy"
-              className="text-[#666] hover:text-[#C89078] transition"
+              className="hover:text-[#C89078] transition"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms"
-              className="text-[#666] hover:text-[#C89078] transition"
+              className="hover:text-[#C89078] transition"
             >
               Terms & Conditions
             </Link>
